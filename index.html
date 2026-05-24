@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body style="
+background: linear-gradient(to right, #041dff, #ff008c);
+font-family: Arial;
+color: white;
+">
+<br><br>
+    <h1 style="text-align: center; font-size: 50px;" >
+        SELAMAT DATANG DI WEBSITE PENCARI CV ! 👋
+    </h1>
+<br><br>
+    <h1 style="text-align: center; font-size: 30px;" >
+        Silahkan Login untuk mencari template CV terbaikmu 🔥
+    </h1>
+
+    <div style="
+    width: 500px;
+    margin: 200px auto;
+    background-color: rgba(255, 255, 255, 0.448);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    ">
+
+        <h1>LOGIN</h1>
+
+        <input type="text"
+        id="username"
+        placeholder="Masukkan Username"
+        style="
+        width: 90%;
+        padding: 12px;
+        margin-top: 20px;
+        border-radius: 10px;
+        border: none;
+        ">
+
+        <br><br>
+
+        <input type="password"
+        id="password"
+        placeholder="Masukkan Password"
+        style="
+        width: 90%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        ">
+
+        <br><br>
+
+        <button onclick="login()"
+        style="
+        width: 95%;
+        padding: 12px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        ">
+            LOGIN
+        </button>
+
+        <br><br>
+
+        <a href="register.html" style="
+        color: white;
+        text-decoration: none;
+        ">
+            Belum punya akun? Register
+        </a>
+
+    </div>
+
+    <script>
+
+        function login() {
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            let savedUsername = localStorage.getItem("username");
+            let savedPassword = localStorage.getItem("password");
+
+            if (username === "" || password === "") {
+
+                alert("ISI DULU BANG 😭");
+
+            }
+
+            else if (username === savedUsername && password === savedPassword) {
+
+                alert("LOGIN BERHASIL 🔥");
+
+                window.location.href = "dashboard.html";
+
+            }
+
+            else {
+
+                alert("USERNAME ATAU PASSWORD SALAH WOII 😭");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

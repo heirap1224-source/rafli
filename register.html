@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body style="
+background: linear-gradient(to right, #141e30, #243b55);
+font-family: Arial;
+color: white;
+">
+
+    <div style="
+    width: 400px;
+    margin: 100px auto;
+    background-color: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    ">
+
+        <h1>REGISTER</h1>
+
+        <input type="text"
+        id="username"
+        placeholder="Masukkan Username"
+        style="
+        width: 90%;
+        padding: 12px;
+        margin-top: 20px;
+        border-radius: 10px;
+        border: none;
+        ">
+
+        <br><br>
+
+        <input type="password"
+        id="password"
+        placeholder="Masukkan Password"
+        style="
+        width: 90%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        ">
+
+        <br><br>
+
+        <button onclick="register()"
+        style="
+        width: 95%;
+        padding: 12px;
+        background-color: #ff008c;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        ">
+            REGISTER
+        </button>
+
+    </div>
+
+    <script>
+
+        function register() {
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+
+                alert("ISI DULU BANG 😭");
+
+            } else {
+
+                localStorage.setItem("username", username);
+                localStorage.setItem("password", password);
+
+                alert("REGISTER BERHASIL 🔥");
+
+                window.location.href = "index.html";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
